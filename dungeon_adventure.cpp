@@ -15,7 +15,10 @@ int main()
     char restart;
 
 
-    cout << "Welcome to the dungen" << endl;  // intro to my game
+    //it begins here
+    while (gameover)
+    {
+        cout << "Welcome to the dungen" << endl;  // intro to my game
     cout << "you have found your self trapped in a very dark area" << endl;
     cout << "your goal is to escape" << endl;
 
@@ -23,10 +26,6 @@ int main()
     cin >> Input;
 
     cout << "Good luck" << endl;
-
-    //it begins here
-    while (gameover)
-    {
 
 
 
@@ -107,6 +106,7 @@ int main()
             cout << "you have choose to ignore the light and move on into the darkness" << endl;
             cout << " out of no where you hear slow heavy footsteps coming from behind you" << endl;
             cout << " turn around? y for yes and n for no" << endl;
+            cin >> lookback_noflash;
 
             if (lookback_noflash == 'y')
             {
