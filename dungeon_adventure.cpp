@@ -27,13 +27,13 @@ int main() // main
             restart = ' ';
 
                 cout << "Welcome to the dungen" << endl;  // intro to my game
-            cout << "you have found your self trapped in a very dark area" << endl;
-            cout << "your goal is to escape" << endl;
+                cout << "you have found your self trapped in a very dark area" << endl;
+                cout << "your goal is to escape" << endl;
 
-            cout << "press any key to start" << endl;
-            cin >> Input;
+                cout << "press any key to start" << endl;
+                cin >> Input;
 
-            cout << "Good luck" << endl;
+                cout << "Good luck" << endl;
 
 
 
@@ -54,7 +54,13 @@ int main() // main
                 cout << "once closer you notice its a wood chest" << endl;
                 cout << "open the chest? press y for yes and n for no" << endl; //y = yes and n = no
                 cin >> chest;
-
+                while (chest != 'y' && chest != 'n' )
+                {
+                    cout << "wrong input try again" << endl;
+                    cout << "please enter y or n" << endl;
+                    cin >> chest;
+                }
+                
                 if (chest == 'y') 
                 {
                     cout << "you open the chest and find a flash light!" << endl;
@@ -63,6 +69,12 @@ int main() // main
                     cout << "turn around and shine the flashlight? y for yes and n for no" << endl;
                     cin >> lookback_flash;
 
+                    while (lookback_flash != 'y' && lookback_flash != 'n')
+                    {
+                        cout << "wrong input try again" << endl;
+                        cout << " please pick y or n" << endl;
+                        cin >> lookback_flash;
+                    }
                     if (lookback_flash == 'y')
                     {
             
@@ -71,6 +83,12 @@ int main() // main
                         cout << "deafting the ghost has made a spot on the wall shine do you want to check it out? y for yes and n for no" << endl;
                         cin >> wallspot;
 
+                        while (wallspot != 'y' && wallspot != 'n' )
+                        {
+                            cout << "wrong input try again" << endl;
+                            cout << "please pick y or n" << endl;
+                            cin >> wallspot;
+                        }
                         if (wallspot == 'y')
                         {
                             cout << "you start to walk towards the shinning spot on the wall" << endl;
@@ -99,11 +117,24 @@ int main() // main
                      cout << " your chooice leds you to a wall with a door" << endl;
                      cout << " open the door? y for yes and n for no" << endl;
                      cin >> door;
+
+                     while (door != 'y' && door != 'n' )
+                     {
+                         cout << "wrong input try again" << endl;
+                         cout << "please pick y or n" << endl;
+                         cin >> door;
+                     }
                 
                         if (door == 'y')
                         {
                             cout << "you opened the door and a bright light hits you upon opening your eyes you see gold!" << endl;
                             cout << " you escape with gold!" << endl;
+                            gameover = true;
+                        }
+                        else 
+                        {
+                            cout << "you choose not to open the door. turning back makes your insainty reach its limit" << endl;
+                            cout << "Game over" << endl;
                             gameover = true;
                         }
                     }
